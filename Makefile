@@ -1,5 +1,5 @@
 
-all: haydn-094 haydn-104
+all: haydn-094 haydn-104 haydn-101
 
 haydn-094: haydn-094/haydn-094.pdf
 
@@ -11,8 +11,15 @@ haydn-104: haydn-104/haydn-104.pdf
 haydn-104/haydn-104.pdf: haydn-104/haydn-104.ly
 	cd haydn-104 && lilypond --pdf --png haydn-104.ly
 
+haydn-101: haydn-101/haydn-101.pdf
+
+haydn-101/haydn-101.pdf: haydn-101/haydn-101.ly
+	cd haydn-101 && lilypond --pdf --png haydn-101.ly
+
 clean:
 	rm haydn-094/haydn-094.pdf
 	rm haydn-094/haydn-094.png
 	rm haydn-104/haydn-104.pdf
 	rm haydn-104/haydn-104.png
+	rm haydn-101/haydn-101.pdf
+	rm haydn-101/haydn-101.png
