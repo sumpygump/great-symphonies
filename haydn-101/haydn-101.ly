@@ -124,3 +124,21 @@
     }
 >>
 } % }}}
+% Movement IV Melody B {{{
+\score {
+    \header {piece = "Mvmt IV : Melody B"}
+    \layout { ragged-right = ##f }
+<<
+    \relative c'' {
+        \clef "treble"
+        \key d \major
+        \time 4/4
+        a4 b cis d | dis4 e cis r |
+        cis4 d b r | bis4 cis a r |
+    }
+    \addlyrics {
+      That's the way to wind a clock,
+      wind a clock, wind a clock.
+    }
+>>
+} % }}}
