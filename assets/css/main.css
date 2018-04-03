@@ -38,6 +38,12 @@ h2, h3 {
 }
 
 .clip .img {
+    text-align: center;
+    padding: 18px;
+}
+.clip .img img {
+    width: 100%;
+    image-rendering: crisp-edges;
 }
 
 .clip audio {
