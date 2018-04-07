@@ -19,7 +19,16 @@
                 <h1>Great Symphonies</h1>
             </div>
 
-            <div class="section">
+            <div class="menu">
+                <ol>
+                    <li><a href="#haydn-094">Haydn | Symphony No. 94 &ldquo;Surprise&rdquo;</a></li>
+                    <li><a href="#haydn-104">Haydn | Symphony No. 104 &ldquo;London&rdquo;</a></li>
+                    <li><a href="#haydn-101">Haydn | Symphony No. 101 &ldquo;Clock&rdquo;</a></li>
+                    <li><a href="#haydn-092">Haydn | Symphony No. 92 &ldquo;Oxford&rdquo;</a></li>
+                </ol>
+            </div>
+
+            <div class="section" id="haydn-094" style="display:none;">
                 <div class="section-hd">
                     <h2>Haydn : Symphony No. 94 in G major, &ldquo;Surprise&rdquo;</h2>
                     <div class="btns">
@@ -73,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="section">
+            <div class="section" id="haydn-104" style="display:none;">
                 <div class="section-hd">
                     <h2>Haydn : Symphony No. 104 in D major, &ldquo;London&rdquo;</h2>
                     <div class="btns">
@@ -154,7 +163,7 @@
                 </div>
             </div>
 
-            <div class="section">
+            <div class="section" id="haydn-101" style="display:none;">
                 <div class="section-hd">
                     <h2>Haydn : Symphony No. 101 in D major, &ldquo;Clock&rdquo;</h2>
                     <div class="btns">
@@ -226,9 +235,9 @@
                 </div>
             </div>
 
-            <div class="section">
+            <div class="section" id="haydn-092" style="display:none;">
                 <div class="section-hd">
-                    <h2>Haydn : Symphony No. 092 in G major, &ldquo;Oxford&rdquo;</h2>
+                    <h2>Haydn : Symphony No. 92 in G major, &ldquo;Oxford&rdquo;</h2>
                     <div class="btns">
                         <a class="btn" href="haydn-092/haydn-092.pdf" target="_blank">Download PDF</a>
                     </div>
@@ -290,5 +299,39 @@
             </div>
 
         </div><!-- .page -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script>
+            var Symphonies = {
+                sections: null,
+
+                init: function() {
+                    this.sections = $('.section');
+                    this.hideSections();
+                    this.bind();
+
+                    if (window.location.hash) {
+                        this.showSection(window.location.hash);
+                    }
+                },
+                bind: function() {
+                    var self = this;
+                    $('.menu a').on('click', function(e) {
+                        self.hideSections();
+                        self.showSection($(this).attr('href'));
+                    });
+                },
+                hideSections: function() {
+                    this.sections.hide();
+                },
+                showSection: function(id) {
+                    this.sections.filter(id).show();
+                }
+            };
+
+            $(function() {
+                Symphonies.init();
+            });
+        </script>
     </body>
 </html>
