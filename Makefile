@@ -4,52 +4,39 @@ LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
 
 all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100
 
-haydn-094: haydn-094/haydn-094.pdf
-haydn-094/haydn-094.pdf: haydn-094/haydn-094.ly
+# Haydn 094
+haydn-094: haydn-094/haydn-094.pdf haydn-094/haydn-094-part-1a.png
+haydn-094/haydn-094.pdf: haydn-094/haydn-094.ly haydn-094/haydn-094-melodies.ly
 	cd haydn-094 && $(LILY_PDF) haydn-094.ly
-	cd haydn-094 && $(LILY_PNG) haydn-094-1a.ly
-	cd haydn-094 && $(LILY_PNG) haydn-094-1b.ly
-	cd haydn-094 && $(LILY_PNG) haydn-094-2.ly
-	cd haydn-094 && $(LILY_PNG) haydn-094-3.ly
-	cd haydn-094 && $(LILY_PNG) haydn-094-4.ly
+haydn-094/haydn-094-part-1a.png: haydn-094/haydn-094-melodies.ly haydn-094/haydn-094-part.ly
+	cd haydn-094 && $(LILY_PNG) haydn-094-part.ly
 	cd haydn-094 && $(LILY_CLEAN)
 
-haydn-104: haydn-104/haydn-104.pdf
-haydn-104/haydn-104.pdf: haydn-104/haydn-104.ly
-	cd haydn-104 && $(LILY_PNG) haydn-104-1a.ly
-	cd haydn-104 && $(LILY_PNG) haydn-104-1b.ly
-	cd haydn-104 && $(LILY_PNG) haydn-104-1c.ly
-	cd haydn-104 && $(LILY_PNG) haydn-104-2.ly
-	cd haydn-104 && $(LILY_PNG) haydn-104-3a.ly
-	cd haydn-104 && $(LILY_PNG) haydn-104-3b.ly
-	cd haydn-104 && $(LILY_PNG) haydn-104-4a.ly
-	cd haydn-104 && $(LILY_PNG) haydn-104-4b.ly
+# Haydn 104
+haydn-104: haydn-104/haydn-104.pdf haydn-104/haydn-104-part-1a.png
+haydn-104/haydn-104.pdf: haydn-104/haydn-104.ly haydn-104/haydn-104-melodies.ly
 	cd haydn-104 && $(LILY_PDF) haydn-104.ly
+haydn-104/haydn-104-part-1a.png: haydn-104/haydn-104-melodies.ly haydn-104/haydn-104-part.ly
+	cd haydn-104 && $(LILY_PNG) haydn-104-part.ly
 	cd haydn-104 && $(LILY_CLEAN)
 
-haydn-101: haydn-101/haydn-101.pdf
-haydn-101/haydn-101.pdf: haydn-101/haydn-101.ly
-	cd haydn-101 && $(LILY_PNG) haydn-101-1a.ly
-	cd haydn-101 && $(LILY_PNG) haydn-101-1b.ly
-	cd haydn-101 && $(LILY_PNG) haydn-101-2.ly
-	cd haydn-101 && $(LILY_PNG) haydn-101-3.ly
-	cd haydn-101 && $(LILY_PNG) haydn-101-3b.ly
-	cd haydn-101 && $(LILY_PNG) haydn-101-4a.ly
-	cd haydn-101 && $(LILY_PNG) haydn-101-4b.ly
+# Haydn 101
+haydn-101: haydn-101/haydn-101.pdf haydn-101/haydn-101-part-1a.png
+haydn-101/haydn-101.pdf: haydn-101/haydn-101.ly haydn-101/haydn-101-melodies.ly
 	cd haydn-101 && $(LILY_PDF) haydn-101.ly
+haydn-101/haydn-101-part-1a.png: haydn-101/haydn-101-melodies.ly haydn-101/haydn-101-part.ly
+	cd haydn-101 && $(LILY_PNG) haydn-101-part.ly
 	cd haydn-101 && $(LILY_CLEAN)
 
-haydn-092: haydn-092/haydn-092.pdf
-haydn-092/haydn-092.pdf: haydn-092/haydn-092-melodies.ly
-	cd haydn-092 && $(LILY_PNG) haydn-092-1a.ly
-	cd haydn-092 && $(LILY_PNG) haydn-092-1b.ly
-	cd haydn-092 && $(LILY_PNG) haydn-092-1c.ly
-	cd haydn-092 && $(LILY_PNG) haydn-092-2.ly
-	cd haydn-092 && $(LILY_PNG) haydn-092-3.ly
-	cd haydn-092 && $(LILY_PNG) haydn-092-4.ly
+# Haydn 092
+haydn-092: haydn-092/haydn-092.pdf haydn-092/haydn-092-part-1a.png
+haydn-092/haydn-092.pdf: haydn-092/haydn-092.ly haydn-092/haydn-092-melodies.ly
 	cd haydn-092 && $(LILY_PDF) haydn-092.ly
+haydn-092/haydn-092-part-1a.png: haydn-092/haydn-092-melodies.ly haydn-092/haydn-092-part.ly
+	cd haydn-092 && $(LILY_PNG) haydn-092-part.ly
 	cd haydn-092 && $(LILY_CLEAN)
 
+# Haydn 100
 haydn-100: haydn-100/haydn-100.pdf
 haydn-100/haydn-100.pdf: haydn-100/haydn-100-melodies.ly
 	cd haydn-100 && $(LILY_PNG) haydn-100-part.ly
