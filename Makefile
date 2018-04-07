@@ -2,7 +2,7 @@ LILY_PDF=lilypond --pdf
 LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
 LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
 
-all: haydn-094 haydn-104 haydn-101 haydn-092
+all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100
 
 haydn-094: haydn-094/haydn-094.pdf
 haydn-094/haydn-094.pdf: haydn-094/haydn-094.ly
@@ -40,7 +40,7 @@ haydn-101/haydn-101.pdf: haydn-101/haydn-101.ly
 	cd haydn-101 && $(LILY_CLEAN)
 
 haydn-092: haydn-092/haydn-092.pdf
-haydn-092/haydn-092.pdf: haydn-092/haydn-092.ly
+haydn-092/haydn-092.pdf: haydn-092/haydn-092-melodies.ly
 	cd haydn-092 && $(LILY_PNG) haydn-092-1a.ly
 	cd haydn-092 && $(LILY_PNG) haydn-092-1b.ly
 	cd haydn-092 && $(LILY_PNG) haydn-092-1c.ly
@@ -49,6 +49,12 @@ haydn-092/haydn-092.pdf: haydn-092/haydn-092.ly
 	cd haydn-092 && $(LILY_PNG) haydn-092-4.ly
 	cd haydn-092 && $(LILY_PDF) haydn-092.ly
 	cd haydn-092 && $(LILY_CLEAN)
+
+haydn-100: haydn-100/haydn-100.pdf
+haydn-100/haydn-100.pdf: haydn-100/haydn-100-melodies.ly
+	cd haydn-100 && $(LILY_PNG) haydn-100-part.ly
+	cd haydn-100 && $(LILY_PDF) haydn-100.ly
+	cd haydn-100 && $(LILY_CLEAN)
 
 clean:
 	rm haydn-094/*.pdf
@@ -59,3 +65,5 @@ clean:
 	rm haydn-101/*.png
 	rm haydn-092/*.pdf
 	rm haydn-092/*.png
+	rm haydn-100/*.pdf
+	rm haydn-100/*.png
