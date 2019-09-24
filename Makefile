@@ -2,7 +2,7 @@ LILY_PDF=lilypond --pdf
 LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
 LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
 
-all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 mozart-040 mozart-039 mozart-041
+all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 mozart-040 mozart-039 mozart-041 beethoven-001
 
 # Haydn 094
 haydn-094: haydn-094/haydn-094.pdf haydn-094/haydn-094-part-1a.png
@@ -67,6 +67,14 @@ mozart-041/mozart-041-part-1a.png: mozart-041/mozart-041-melodies.ly mozart-041/
 	cd mozart-041 && $(LILY_PNG) mozart-041-part.ly
 	cd mozart-041 && $(LILY_CLEAN)
 
+# Beethoven 001
+beethoven-001: beethoven-001/beethoven-001.pdf beethoven-001/beethoven-001-part-1a.png
+beethoven-001/beethoven-001.pdf: beethoven-001/beethoven-001-melodies.ly beethoven-001/beethoven-001.ly
+	cd beethoven-001 && $(LILY_PDF) beethoven-001.ly
+beethoven-001/beethoven-001-part-1a.png: beethoven-001/beethoven-001-melodies.ly beethoven-001/beethoven-001-part.ly
+	cd beethoven-001 && $(LILY_PNG) beethoven-001-part.ly
+	cd beethoven-001 && $(LILY_CLEAN)
+
 clean:
 	rm haydn-094/*.pdf
 	rm haydn-094/*.png
@@ -84,3 +92,5 @@ clean:
 	rm mozart-039/*.png
 	rm mozart-041/*.pdf
 	rm mozart-041/*.png
+	rm beethoven-001/*.pdf
+	rm beethoven-001/*.png
