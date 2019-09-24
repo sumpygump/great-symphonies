@@ -24,7 +24,7 @@ melody_ib = <<
         \time 3/4
         \partial 2 bes4 d |
         f2.( | f4) d'4 c | bes2 a4 | r4 a c |
-        f,2.( | f4) g, c | ees2 d4 |
+        f,2.( | f4) a, c | ees2 d4 |
     }
     \addlyrics {
       On the chord we are start -- ing, And once

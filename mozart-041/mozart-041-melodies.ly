@@ -76,7 +76,7 @@ melody_iib = <<
         \clef "treble"
         \key f \major
         \time 3/4
-        c4 d e | f4 e8 r8 r4 |
+        c4 d e | f4 d8 r8 r4 |
         d4 e f | g4 e8
     }
     \addlyrics {
