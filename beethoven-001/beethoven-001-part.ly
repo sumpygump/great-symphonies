@@ -28,3 +28,23 @@
   \bookOutputSuffix "2b"
   \melody_iib
 }
+
+\book {
+  \bookOutputSuffix "3a"
+  \melody_iiia
+}
+
+\book {
+  \bookOutputSuffix "3b"
+  \melody_iiib
+}
+
+\book {
+  \bookOutputSuffix "4a"
+  \melody_iva
+}
+
+\book {
+  \bookOutputSuffix "4b"
+  \melody_ivb
+}

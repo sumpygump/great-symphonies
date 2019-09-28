@@ -79,3 +79,85 @@ melody_iib = <<
     }
 >> % }}}
 
+% Movement III Melody A {{{
+melody_iiia = <<
+    \relative c' {
+        \clef "treble"
+        \key c \major
+        \time 3/4
+        \partial 4 g4 |
+        a2 b4 | c2 d4 | e4 e fis | g2 gis4 |
+        a2 b4 | c2 cis4 | d4 d d | g,4
+    }
+    \addlyrics {
+        This min -- u -- et goes right up the scale,
+        Its mu -- sic sounds so heart -- y and hale.
+    }
+>> % }}}
+
+% Movement III Melody B {{{
+melody_iiib = <<
+    \relative c'' {
+        \clef "treble"
+        \key c \major
+        \time 3/4
+        \partial 4 g4 | <c e>2 <c e>4 | <c e>2 <c e>4 |
+        <c e>2 <c e>4 | <c e>2 <c e>4 | <c~ e~>2. | 
+        <<
+          {
+            \voiceOne
+            <c~ e~>2. | <c~ e~>2. | <c e>2.
+          }
+          \new Voice {
+            \voiceTwo
+            c,8 g a b c d | e8 b c d e f | g8 fis g f e d | c4
+          }
+          \addlyrics {
+            Now the fid -- dles in -- ter -- rupt and car -- ry on with
+            great ex -- cite -- ment all ar -- ound.
+          }
+        >> \oneVoice
+    }
+    \addlyrics {
+        Then blow the horns and let the Tri -- o sound!
+    }
+>> % }}}
+
+% Movement IV Melody A {{{
+melody_iva = <<
+    \relative c' {
+        \clef "treble"
+        \key g \major
+        \time 2/4
+        \partial 4 r16 d e fis |
+        g16 a b c d8 d | b4 g8 g |
+        a8 a b16 a g a | b4( g16) d e fis |
+        g16 a b c d8 d | b8 g a16 g fis g |
+        e8 a b16 a gis a | d,4 r8 d8 | d'8 d d d |
+        d4 c8 c | c8 c c c | c4 b8 b |
+        b8 b b b | a8 r8 c8 r8 | g8 r8 fis r8 | g8
+    }
+    \addlyrics {
+        So let us list -- en to the fin -- al tune in this
+        ope -- ning sym -- pho -- ny of nine, A mer -- ry
+        mel -- o -- dy that skips a -- bout and nev -- er seems to
+        want to keep a stead -- y line. But then in daint -- y
+        meas -- ure It seems to take new pleas -- ure, And
+        brings us to the end Like some old friend.
+    }
+>> % }}}
+
+% Movement IV Melody B {{{
+melody_ivb = <<
+    \relative c' {
+        \clef "treble"
+        \key g \major
+        \time 2/4
+        d4. g8 | fis8 fis r8 a8 |
+        g8 g r b | a8 fis d c | b8 d
+    }
+    \addlyrics {
+        Keep it sing -- ing and ring -- ing,
+        More simp -- le pleas -- ure bring -- ing.
+    }
+>> % }}}

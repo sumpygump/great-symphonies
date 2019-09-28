@@ -33,3 +33,25 @@
     \header {piece = "Mvmt II : Melody B"}
     \melody_iib
 }
+
+\score {
+    \header {piece = "Mvmt III : Melody A"}
+    \melody_iiia
+}
+
+\pageBreak
+
+\score {
+    \header {piece = "Mvmt III : Melody B"}
+    \melody_iiib
+}
+
+\score {
+    \header {piece = "Mvmt IV : Melody A"}
+    \melody_iva
+}
+
+\score {
+    \header {piece = "Mvmt IV : Melody B"}
+    \melody_ivb
+}
