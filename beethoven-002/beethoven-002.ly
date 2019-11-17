@@ -1,9 +1,9 @@
-% Beethoven Symphony No. 1
+% Beethoven Symphony No. 2
 \version "2.18.2"
-\include "beethoven-001-melodies.ly"
+\include "beethoven-002-melodies.ly"
 
 \header {
-    title = "Symphony No. 1 in C Major, Op. 21"
+    title = "Symphony No. 2 in C Major, Op. 21"
     composer = "Beethoven"
     tagline = "From Great Symphonies: How to recognize and remember them by Sigmund Spaeth"
 }
@@ -35,28 +35,16 @@
 }
 
 \score {
+    \header {piece = "Mvmt II : Melody C"}
+    \melody_iic
+}
+
+\score {
     \header {piece = "Mvmt III : Melody A"}
     \melody_iiia
 }
 
-\pageBreak
-
 \score {
     \header {piece = "Mvmt III : Melody B"}
     \melody_iiib
-}
-
-\score {
-    \header {piece = "Mvmt IV : Melody A"}
-    \melody_iva
-}
-
-\score {
-    \header {piece = "Mvmt IV : Melody B"}
-    \melody_ivb
-}
-
-\score {
-    \header {piece = "Mvmt IV : Melody C"}
-    \melody_ivc
 }

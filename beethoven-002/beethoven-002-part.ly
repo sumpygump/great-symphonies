@@ -1,6 +1,6 @@
-% Beethoven Symphony No. 1
+% Beethoven Symphony No. 2
 \version "2.18.2"
-\include "beethoven-001-melodies.ly"
+\include "beethoven-002-melodies.ly"
 \paper { oddFooterMarkup = ##f }
 \layout { ragged-right = ##f }
 
@@ -30,6 +30,11 @@
 }
 
 \book {
+  \bookOutputSuffix "2c"
+  \melody_iic
+}
+
+\book {
   \bookOutputSuffix "3a"
   \melody_iiia
 }
@@ -40,16 +45,6 @@
 }
 
 \book {
-  \bookOutputSuffix "4a"
-  \melody_iva
-}
-
-\book {
-  \bookOutputSuffix "4b"
-  \melody_ivb
-}
-
-\book {
-  \bookOutputSuffix "4c"
-  \melody_ivc
+  \bookOutputSuffix "3c"
+  \melody_iiic
 }

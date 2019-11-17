@@ -161,3 +161,16 @@ melody_ivb = <<
         More simp -- le pleas -- ure bring -- ing.
     }
 >> % }}}
+
+% Movement IV Melody C {{{
+melody_ivc = <<
+    \relative c'' {
+        \clef "treble"
+        \key c \major
+        \time 2/4
+        c4 c8. c16 | d4 d8 r8 | e4 e8. e16 | f4 e8
+    }
+    \addlyrics {
+        Must you be go -- ing? Must you be go -- ing?
+    }
+>> % }}}
