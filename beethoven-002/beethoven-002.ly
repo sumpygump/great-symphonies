@@ -48,3 +48,18 @@
     \header {piece = "Mvmt III : Melody B"}
     \melody_iiib
 }
+
+\score {
+    \header {piece = "Mvmt IV : Melody A"}
+    \melody_iva
+}
+
+\score {
+    \header {piece = "Mvmt IV : Melody B"}
+    \melody_ivb
+}
+
+\score {
+    \header {piece = "Mvmt IV : Melody C"}
+    \melody_ivc
+}

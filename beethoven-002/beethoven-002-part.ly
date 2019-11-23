@@ -45,6 +45,16 @@
 }
 
 \book {
-  \bookOutputSuffix "3c"
-  \melody_iiic
+  \bookOutputSuffix "4a"
+  \melody_iva
+}
+
+\book {
+  \bookOutputSuffix "4b"
+  \melody_ivb
+}
+
+\book {
+  \bookOutputSuffix "4c"
+  \melody_ivc
 }

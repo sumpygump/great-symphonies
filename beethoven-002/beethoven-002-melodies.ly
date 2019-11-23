@@ -130,16 +130,51 @@ melody_iiib = <<
     }
 >> % }}}
 
-% Movement III Melody C {{{
-melody_iiic = <<
+% Movement IV Melody A {{{
+melody_iva = <<
     \relative c' {
         \clef "treble"
         \key d \major
         \time 2/2
         \partial 8 fis8 |
-        g4 r8 cis8 cis4.\trill b16 c16 |
-        e4 a,4 r4 a8 a8
+        g4 r8 cis,8 cis4.\trill b16 cis16 |
+        e4 a,4 r4 a8 a8 | d8( a) fis' fis e( a,) g' g |
+        fis8( a,) a' a a( g) fis e |
+        e8 d d d d cis b cis | d4 e
     }
     \addlyrics {
+        At last we're all in a -- gree -- ment, Let the
+        strings and the drums and the horns and the flutes play the
+        fin -- ish of the sym -- phon -- y as he meant.
+    }
+>> % }}}
+
+% Movement IV Melody B {{{
+melody_ivb = <<
+    \relative c' {
+        \clef "treble"
+        \key d \major
+        \time 2/2
+        d2 e4 fis | g2. g4 | g4 fis e d |
+        g2. g4 | fis2 e4 d | gis2 fis4 e | a2.
+    }
+    \addlyrics {
+        In fu -- gal style, with o -- ver -- lap -- ping
+        parts, This Bee -- tho -- ven still wins our hearts!
+    }
+>> % }}}
+
+% Movement IV Melody C {{{
+melody_ivc = <<
+    \relative c' {
+        \clef "treble"
+        \key d \major
+        \time 2/2
+        cis4 e a cis | e2. cis,4 |
+        d4 fis a d | g2.
+    }
+    \addlyrics {
+        Fol -- low up the chord,
+        You nev -- er will be bored.
     }
 >> % }}}
