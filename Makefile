@@ -2,7 +2,9 @@ LILY_PDF=lilypond --pdf
 LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
 LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
 
-all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 mozart-040 mozart-039 mozart-041 beethoven-001 beethoven-002
+all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 \
+	mozart-040 mozart-039 mozart-041 \
+	beethoven-001 beethoven-002 beethoven-003
 
 # Haydn 094
 haydn-094: haydn-094/haydn-094.pdf haydn-094/haydn-094-part-1a.png
@@ -83,24 +85,23 @@ beethoven-002/beethoven-002-part-1a.png: beethoven-002/beethoven-002-melodies.ly
 	cd beethoven-002 && $(LILY_PNG) beethoven-002-part.ly
 	cd beethoven-002 && $(LILY_CLEAN)
 
+# Beethoven 003
+beethoven-003: beethoven-003/beethoven-003.pdf beethoven-003/beethoven-003-part-1a.png
+beethoven-003/beethoven-003.pdf: beethoven-003/beethoven-003-melodies.ly beethoven-003/beethoven-003.ly
+	cd beethoven-003 && $(LILY_PDF) beethoven-003.ly
+beethoven-003/beethoven-003-part-1a.png: beethoven-003/beethoven-003-melodies.ly beethoven-003/beethoven-003-part.ly
+	cd beethoven-003 && $(LILY_PNG) beethoven-003-part.ly
+	cd beethoven-003 && $(LILY_CLEAN)
+
 clean:
-	rm haydn-094/*.pdf
-	rm haydn-094/*.png
-	rm haydn-104/*.pdf
-	rm haydn-104/*.png
-	rm haydn-101/*.pdf
-	rm haydn-101/*.png
-	rm haydn-092/*.pdf
-	rm haydn-092/*.png
-	rm haydn-100/*.pdf
-	rm haydn-100/*.png
-	rm mozart-040/*.pdf
-	rm mozart-040/*.png
-	rm mozart-039/*.pdf
-	rm mozart-039/*.png
-	rm mozart-041/*.pdf
-	rm mozart-041/*.png
-	rm beethoven-001/*.pdf
-	rm beethoven-001/*.png
-	rm beethoven-002/*.pdf
-	rm beethoven-002/*.png
+	rm haydn-094/*.pdf haydn-094/*.png
+	rm haydn-104/*.pdf haydn-104/*.png
+	rm haydn-101/*.pdf haydn-101/*.png
+	rm haydn-092/*.pdf haydn-092/*.png
+	rm haydn-100/*.pdf haydn-100/*.png
+	rm mozart-040/*.pdf mozart-040/*.png
+	rm mozart-039/*.pdf mozart-039/*.png
+	rm mozart-041/*.pdf mozart-041/*.png
+	rm beethoven-001/*.pdf beethoven-001/*.png
+	rm beethoven-002/*.pdf beethoven-002/*.png
+	rm beethoven-003/*.pdf beethoven-003/*.png
