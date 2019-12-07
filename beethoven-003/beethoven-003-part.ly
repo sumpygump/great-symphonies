@@ -10,4 +10,9 @@
 \book { \bookOutputSuffix "2b" \melody_iib }
 \book { \bookOutputSuffix "2c" \melody_iic }
 \book { \bookOutputSuffix "3a" \melody_iiia }
+\book { \bookOutputSuffix "3b" \melody_iiib }
+\book { \bookOutputSuffix "4a" \melody_iva }
+\book { \bookOutputSuffix "4b" \melody_ivb }
+\book { \bookOutputSuffix "4c" \melody_ivc }
+\book { \bookOutputSuffix "4d" \melody_ivd }
 

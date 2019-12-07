@@ -96,3 +96,83 @@ melody_iiia = <<
     }
 >> % }}}
 
+% Movement III Melody B {{{
+melody_iiib = <<
+    \relative c' {
+        \clef "treble"
+        \key ees \major
+        \time 3/4
+        \partial 4 bes4 |
+        bes2.~ | bes2 ees4 | ees2 g4 |
+        g2 bes4 | bes2 g4 | ees2 g4 |
+        f4 g g | f4
+    }
+    \addlyrics {
+        The horns are sound -- ing forth a
+        cheer -- ful hunt -- ing call, list -- en all!
+    }
+>> % }}}
+
+% Movement IV Melody A {{{
+melody_iva = <<
+    \relative c' {
+        \clef "treble"
+        \key ees \major
+        \time 2/4
+        ees8 r8 r4 | bes'8 r8 r4 | bes,8 r8 r4 |
+        ees8 r8 r4 | ees8 r8 d8 r8 | ees8 r8 e4 |
+        f8 d ees a, | bes4
+    }
+    \addlyrics {
+        This is just a bit of bass, out look -- ing for a place.
+    }
+>> % }}}
+
+% Movement IV Melody B {{{
+melody_ivb = <<
+    \relative c' {
+        \clef "treble"
+        \key ees \major
+        \time 2/4
+        \partial 8 ees8 |
+        g4. ees8 | d4. f8 | aes4. f8 | ees4. g8 |
+        bes4 bes | bes4. g8 | bes16( aes) f8 aes16( g) ees8 |
+        g4( f8)
+    }
+    \addlyrics {
+        The strife is done, The vic -- t'ry won, Re -- joice and
+        sing, Let praise of he -- roes ring!
+    }
+>> % }}}
+
+% Movement IV Melody C {{{
+melody_ivc = <<
+    \relative c'' {
+        \clef "treble"
+        \key ees \major
+        \time 2/4
+        \partial 8 a8 |
+        bes4. g8 | f4. c'8 | ees,4\trill g8.( f16) | ees8
+    }
+    \addlyrics {
+        Let prais -- es ring, Re -- joice and sing!
+    }
+>> % }}}
+
+% Movement IV Melody D {{{
+melody_ivd = <<
+    \relative c' {
+        \clef "treble"
+        \key ees \major
+        \time 2/4
+        \partial 8 ees8 |
+        g4 ees8..( d32) | d4. f8 | aes4 f8..( ees32) |
+        ees4. g8 | bes4 bes | bes4. g8 | aes8 f g ees |
+        g4( f8)
+    }
+    \addlyrics {
+        The strife is done. The vict' -- ry won, Re -- joice
+        and sing, Let praise of he -- roes ring!
+    }
+>> % }}}
+

@@ -15,4 +15,9 @@
 \score { \header {piece = "Mvmt II : Melody B"} \melody_iib }
 \score { \header {piece = "Mvmt II : Melody C"} \melody_iic }
 \score { \header {piece = "Mvmt III : Melody A"} \melody_iiia }
+\score { \header {piece = "Mvmt III : Melody B"} \melody_iiib }
+\score { \header {piece = "Mvmt IV : Melody A"} \melody_iva }
+\score { \header {piece = "Mvmt IV : Melody B"} \melody_ivb }
+\score { \header {piece = "Mvmt IV : Melody C"} \melody_ivc }
+\score { \header {piece = "Mvmt IV : Melody D"} \melody_ivd }
 
