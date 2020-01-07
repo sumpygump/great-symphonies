@@ -4,7 +4,7 @@ LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
 
 all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 \
 	mozart-040 mozart-039 mozart-041 \
-	beethoven-001 beethoven-002 beethoven-003 beethoven-004
+	beethoven-001 beethoven-002 beethoven-003 beethoven-004 beethoven-005
 
 # Haydn 094
 haydn-094: haydn-094/haydn-094.pdf haydn-094/haydn-094-part-1a.png
@@ -101,6 +101,14 @@ beethoven-004/beethoven-004-part-1a.png: beethoven-004/beethoven-004-melodies.ly
 	cd beethoven-004 && $(LILY_PNG) beethoven-004-part.ly
 	cd beethoven-004 && $(LILY_CLEAN)
 
+# Beethoven 005
+beethoven-005: beethoven-005/beethoven-005.pdf beethoven-005/beethoven-005-part-1a.png
+beethoven-005/beethoven-005.pdf: beethoven-005/beethoven-005-melodies.ly beethoven-005/beethoven-005.ly
+	cd beethoven-005 && $(LILY_PDF) beethoven-005.ly
+beethoven-005/beethoven-005-part-1a.png: beethoven-005/beethoven-005-melodies.ly beethoven-005/beethoven-005-part.ly
+	cd beethoven-005 && $(LILY_PNG) beethoven-005-part.ly
+	cd beethoven-005 && $(LILY_CLEAN)
+
 clean:
 	rm haydn-094/*.pdf haydn-094/*.png
 	rm haydn-104/*.pdf haydn-104/*.png
@@ -114,3 +122,4 @@ clean:
 	rm beethoven-002/*.pdf beethoven-002/*.png
 	rm beethoven-003/*.pdf beethoven-003/*.png
 	rm beethoven-004/*.pdf beethoven-004/*.png
+	rm beethoven-005/*.pdf beethoven-005/*.png
