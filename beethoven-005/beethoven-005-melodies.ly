@@ -88,3 +88,68 @@ melody_iia = <<
         No task to great, We are mas -- ters!
     }
 >> % }}}
+
+% Movement II Melody B {{{
+melody_iib = <<
+    \relative c' {
+        \clef "treble"
+        \key aes \major
+        \time 3/8
+        \partial 8 ees16. g32 |
+        aes8 aes bes |
+        c4 aes16. bes32 |
+        c8 c d | ees4
+    }
+    \addlyrics {
+        Soon our work will be done,
+        and the vic -- to --ry won!
+    }
+>> % }}}
+
+% Movement II Melody C {{{
+melody_iic = <<
+    \relative c'' {
+        \clef "treble"
+        \key aes \major
+        \time 3/8
+        \partial 8. aes16( c ees) |
+        ees16( des) c8. c16 |
+        c16( bes) aes8. aes16 |
+        g4 \tuplet 3/2 { g16( aes bes) } |
+        aes8
+    }
+    \addlyrics {
+    }
+>> % }}}
+
+% Movement II Melody D {{{
+melody_iid = <<
+    \relative c'' {
+        \clef "treble"
+        \key aes \major
+        \time 3/8
+        \partial 8. aes16( c ees) |
+        ees16( des) c8. c16 |
+        <g' ees>16( <f des>) <ees c>8. ees16 |
+        ees16( des) c8.
+    }
+    \addlyrics {
+    }
+>> % }}}
+
+% Movement III Melody A {{{
+melody_iiia = <<
+    \relative c' {
+        \clef "treble"
+        \key c \minor
+        \time 3/4
+        \partial 4 g4 |
+        c4 ees g | c2 ees4 |
+        d2 fis,4 | g2. |
+        g2 b4 | c2 d4 | f2 ees4 | d2\fermata
+    }
+    \addlyrics {
+        The bat -- tle is done, we have no fear,
+        Tri -- umph ov -- er Fate is near.
+    }
+>> % }}}

@@ -15,3 +15,7 @@
 \score { \header {piece = "Mvmt I : Melody D"} \melody_id }
 \score { \header {piece = "Mvmt I : Melody E"} \melody_ie }
 \score { \header {piece = "Mvmt II : Melody A"} \melody_iia }
+\score { \header {piece = "Mvmt II : Melody B"} \melody_iib }
+\score { \header {piece = "Mvmt II : Melody C"} \melody_iic }
+\score { \header {piece = "Mvmt II : Melody D"} \melody_iid }
+\score { \header {piece = "Mvmt III : Melody A"} \melody_iia }
