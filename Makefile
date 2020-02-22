@@ -106,7 +106,7 @@ beethoven-005: beethoven-005/beethoven-005.pdf beethoven-005/beethoven-005-part-
 beethoven-005/beethoven-005.pdf: beethoven-005/beethoven-005-melodies.ly beethoven-005/beethoven-005.ly
 	cd beethoven-005 && $(LILY_PDF) beethoven-005.ly
 beethoven-005/beethoven-005-part-1a.png: beethoven-005/beethoven-005-melodies.ly beethoven-005/beethoven-005-part.ly
-	cd beethoven-005 && $(LILY_PNG) beethoven-005-part.ly
+	cd beethoven-005 && $(LILY_PNG) beethoven-005-part.ly | grep -v GenericResourceDir
 	cd beethoven-005 && $(LILY_CLEAN)
 
 clean:

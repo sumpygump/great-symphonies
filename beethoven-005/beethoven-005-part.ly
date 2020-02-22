@@ -14,3 +14,11 @@
 \book { \bookOutputSuffix "2c" \melody_iic }
 \book { \bookOutputSuffix "2d" \melody_iid }
 \book { \bookOutputSuffix "3a" \melody_iiia }
+\book { \bookOutputSuffix "3b" \melody_iiib }
+\book { \bookOutputSuffix "3c" \melody_iiic }
+\book { \bookOutputSuffix "4a" \melody_iva }
+\book { \bookOutputSuffix "4b" \melody_ivb }
+\book { \bookOutputSuffix "4c" \melody_ivc }
+\book { \bookOutputSuffix "4d" \melody_ivd }
+\book { \bookOutputSuffix "4e" \melody_ive }
+\book { \bookOutputSuffix "4f" \melody_ivf }

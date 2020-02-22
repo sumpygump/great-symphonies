@@ -102,7 +102,7 @@ melody_iib = <<
     }
     \addlyrics {
         Soon our work will be done,
-        and the vic -- to --ry won!
+        and the vic -- to -- ry won!
     }
 >> % }}}
 
@@ -151,5 +151,129 @@ melody_iiia = <<
     \addlyrics {
         The bat -- tle is done, we have no fear,
         Tri -- umph ov -- er Fate is near.
+    }
+>> % }}}
+
+% Movement III Melody B {{{
+melody_iiib = <<
+    \relative c'' {
+        \clef "treble"
+        \key c \minor
+        \time 3/4
+        g4 g g | g2. | g4 g g | g2.
+        g4 g g | g2. | bes4 aes g | f2.
+    }
+    \addlyrics {
+      Come, let me in, You can -- not win,
+      I am your Fate, Ear -- ly or late!
+    }
+>> % }}}
+
+% Movement III Melody C {{{
+melody_iiic = <<
+    \relative c' {
+        \clef "treble"
+        \key c \major
+        \time 3/4
+        \partial 4 c4 |
+        b8 c d g, a b | c b c d e f |
+        g2 f4 | e c a' | f d b' | g e
+    }
+    \addlyrics {
+    }
+>> % }}}
+
+% Movement IV Melody A {{{
+melody_iva = <<
+    \relative c' {
+        \clef "treble"
+        \key c \major
+        \time 4/4
+        c2 e | g2. f8 r8 | e8 r d r c r d r |
+        c2. c8. c16 | d2. d8. d16 | e2~ e8 c d e |
+        f8 e f g a g a b | c2~ c8
+    }
+    \addlyrics {
+        Fall in line, and let your ar -- mor shine!
+        We have won, we have won, And all the
+        strug -- gle with our en -- e -- my is done!
+    }
+>> % }}}
+
+% Movement IV Melody B {{{
+melody_ivb = <<
+    \relative c'' {
+        \clef "treble"
+        \key c \major
+        \time 4/4
+        c2. g4 | e'2. d8. c16 | d1~ | d1 | d2. g,4 |
+        f'2. e8. d16 | e1~ | e1
+    }
+    \addlyrics {
+        Sound the trum -- pet's ac -- claim!
+        Call each he -- ro by name!
+    }
+>> % }}}
+
+% Movement IV Melody C {{{
+melody_ivc = <<
+    \relative c'' {
+        \clef "treble"
+        \key c \major
+        \time 4/4
+        \partial 4 \tuplet 3/2 { a8 b c } |
+        d4 \tuplet 3/2 { b8 c d } e4 \tuplet 3/2 { e8 fis g } |
+        d2. \tuplet 3/2 { d8 c b } |
+        a4 \tuplet 3/2 { c8 b a } g4 \tuplet 3/2 { b8 a g } |
+        fis4
+    }
+    \addlyrics {
+        Come on al -- ong, join in the song, fol -- low the
+        crowd, Step -- ping in glee, hap -- py and free,
+        noi -- sy and proud!
+    }
+>> % }}}
+
+% Movement IV Melody D {{{
+melody_ivd = <<
+    \relative c'' {
+        \clef "treble"
+        \key c \major
+        \time 4/4
+        g2. fis4 | e4 d d d |
+        g2. fis4 | e4 d d
+    }
+    \addlyrics {
+        Ha! We told you so! A -- ha!
+        We told you so!
+    }
+>> % }}}
+
+% Movement IV Melody E {{{
+melody_ive = <<
+    \relative c' {
+        \clef "treble"
+        \key c \major
+        \time 4/4
+        \partial 4 g4 |
+        c4 g e' d8. c16 | g'2.
+    }
+    \addlyrics {
+        Then sound the trump -- et's ac -- claim!
+    }
+>> % }}}
+
+% Movement IV Melody F {{{
+melody_ivf = <<
+    \relative c'' {
+        \clef "treble"
+        \key c \major
+        \time 4/4
+        \partial 4 g4 |
+        b4 g d' c8. b16 |
+        c4 g e'
+    }
+    \addlyrics {
+        Then call each vic -- tor by name, by name!
     }
 >> % }}}
