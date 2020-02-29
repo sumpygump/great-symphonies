@@ -10,3 +10,8 @@
 \layout { ragged-right = ##f }
 
 \score { \header {piece = "Mvmt I : Melody A"} \melody_ia }
+\score { \header {piece = "Mvmt I : Melody B"} \melody_ib }
+\score { \header {piece = "Mvmt I : Melody C"} \melody_ic }
+\score { \header {piece = "Mvmt I : Melody D"} \melody_id }
+\score { \header {piece = "Mvmt II : Melody A"} \melody_iia }
+\score { \header {piece = "Mvmt II : Melody B"} \melody_iib }
