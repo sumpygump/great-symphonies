@@ -10,3 +10,5 @@
 \book { \bookOutputSuffix "1d" \melody_id }
 \book { \bookOutputSuffix "2a" \melody_iia }
 \book { \bookOutputSuffix "2b" \melody_iib }
+\book { \bookOutputSuffix "3a" \melody_iiia }
+\book { \bookOutputSuffix "4a" \melody_iva }
