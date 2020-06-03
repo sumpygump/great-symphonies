@@ -1,4 +1,6 @@
 html,body {
+    margin: 0;
+    padding: 0;
     background-color: #98977f;
     font-family: 'Raleway', sans-serif;
 }
@@ -13,9 +15,101 @@ a:active {
     color: #333333;
 }
 
+.banner {
+    margin: 20px 0;
+    display: flex;
+}
+
+.banner h1 {
+    margin: 0;
+}
+
+.banner h1 a {
+    text-decoration: none;
+}
+
+.banner h1 a:hover {
+    color: #444444;
+}
+
+.banner .subtitle {
+    margin-top: 0;
+    font-style: italic;
+}
+
+.banner .blurb {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.book {
+    padding-right: 15px;
+    height: 105px;
+}
+
+.book img {
+    height: 100%;
+    border: 1px solid #000000;
+}
+
 .page {
-    max-width: 850px;
+    padding: 0 20px;
     margin: 0 auto;
+}
+
+.menu {
+}
+
+.menu ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ol li {
+    display: block;
+    list-style-type: none;
+    padding: 18px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu ol li a {
+    text-decoration: none;
+}
+
+.composer-img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    float: left;
+    padding-right: 10px;
+    border-radius: 50%;
+}
+
+.composer-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.composer-name {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.back {
+    margin-bottom: 10px;
+}
+
+.back a {
+    text-decoration: none;
 }
 
 .section {
@@ -65,4 +159,26 @@ a:active {
     border: 1px solid #333333;
     border-radius: 5px;
     padding: 4px;
+}
+
+/*-------------------------------------*
+ * Media Query: Medium
+ *-------------------------------------*/
+@media only screen and (min-width: 620px) {
+    .menu ol li {
+        width: 49%;
+    }
+}
+
+/*-------------------------------------*
+ * Media Query: Large
+ *-------------------------------------*/
+@media only screen and (min-width: 890px) {
+    .page {
+        padding: 0;
+        max-width: 850px;
+    }
+    .menu ol li {
+        width: 31%;
+    }
 }
