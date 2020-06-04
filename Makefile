@@ -106,7 +106,7 @@ beethoven-005: beethoven-005/beethoven-005.pdf beethoven-005/beethoven-005-part-
 beethoven-005/beethoven-005.pdf: beethoven-005/beethoven-005-melodies.ly beethoven-005/beethoven-005.ly
 	cd beethoven-005 && $(LILY_PDF) beethoven-005.ly
 beethoven-005/beethoven-005-part-1a.png: beethoven-005/beethoven-005-melodies.ly beethoven-005/beethoven-005-part.ly
-	cd beethoven-005 && $(LILY_PNG) beethoven-005-part.ly | grep -v GenericResourceDir
+	cd beethoven-005 && $(LILY_PNG) beethoven-005-part.ly
 	cd beethoven-005 && $(LILY_CLEAN)
 
 # Beethoven 006
@@ -114,7 +114,7 @@ beethoven-006: beethoven-006/beethoven-006.pdf beethoven-006/beethoven-006-part-
 beethoven-006/beethoven-006.pdf: beethoven-006/beethoven-006-melodies.ly beethoven-006/beethoven-006.ly
 	cd beethoven-006 && $(LILY_PDF) beethoven-006.ly
 beethoven-006/beethoven-006-part-1a.png: beethoven-006/beethoven-006-melodies.ly beethoven-006/beethoven-006-part.ly
-	cd beethoven-006 && $(LILY_PNG) beethoven-006-part.ly | grep -v GenericResourceDir
+	cd beethoven-006 && $(LILY_PNG) beethoven-006-part.ly
 	cd beethoven-006 && $(LILY_CLEAN)
 
 # Beethoven 007
@@ -122,7 +122,7 @@ beethoven-007: beethoven-007/beethoven-007.pdf beethoven-007/beethoven-007-part-
 beethoven-007/beethoven-007.pdf: beethoven-007/beethoven-007-melodies.ly beethoven-007/beethoven-007.ly
 	cd beethoven-007 && $(LILY_PDF) beethoven-007.ly
 beethoven-007/beethoven-007-part-1a.png: beethoven-007/beethoven-007-melodies.ly beethoven-007/beethoven-007-part.ly
-	cd beethoven-007 && $(LILY_PNG) beethoven-007-part.ly | grep -v GenericResourceDir
+	cd beethoven-007 && $(LILY_PNG) beethoven-007-part.ly
 	cd beethoven-007 && $(LILY_CLEAN)
 
 clean:
