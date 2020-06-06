@@ -3,7 +3,7 @@
 \include "beethoven-002-melodies.ly"
 
 \header {
-    title = "Symphony No. 2 in C Major, Op. 21"
+    title = "Symphony No. 2 in C Major, Op. 36"
     composer = "Beethoven"
     tagline = "From Great Symphonies: How to recognize and remember them by Sigmund Spaeth"
 }

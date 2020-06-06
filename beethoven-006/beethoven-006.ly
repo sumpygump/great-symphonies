@@ -3,7 +3,7 @@
 \include "beethoven-006-melodies.ly"
 
 \header {
-    title = "Symphony No. 6 in F Major Op. 67 “Pastoral”"
+    title = "Symphony No. 6 in F Major Op. 68 “Pastoral”"
     composer = "Beethoven"
     tagline = "From Great Symphonies: How to recognize and remember them by Sigmund Spaeth"
 }
