@@ -1,6 +1,6 @@
 LILY_PDF=lilypond --pdf
-LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
-LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
+LILY_PNG=lilypond -dbackend=eps -dresolution=205 -dno-print-pages -dcrop --png
+LILY_CLEAN=rm -f *.eps && rm -f *.count && rm -f *.tex && rm -f *.texi && rename .cropped '' *.cropped.png
 
 all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 \
 	mozart-040 mozart-039 mozart-041 \
@@ -14,7 +14,7 @@ haydn-094/haydn-094.pdf: haydn-094/haydn-094.ly haydn-094/haydn-094-melodies.ly
 	cd haydn-094 && $(LILY_PDF) haydn-094.ly
 haydn-094/haydn-094-part-1a.png: haydn-094/haydn-094-melodies.ly haydn-094/haydn-094-part.ly
 	cd haydn-094 && $(LILY_PNG) haydn-094-part.ly
-	cd haydn-094 && $(LILY_CLEAN)
+	cd haydn-094 && $(LILY_CLEAN) && $(RENAME_CROPPED)
 
 # Haydn 104
 haydn-104: haydn-104/haydn-104.pdf haydn-104/haydn-104-part-1a.png
