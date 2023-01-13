@@ -3,7 +3,7 @@
 \include "schubert-005-melodies.ly"
 
 \header {
-    title = "Symphony No. 5 in B-flat Major"
+    title = "Symphony No. 5 in B-flat Major (D 485)"
     composer = "Schubert"
     tagline = "From Great Symphonies: How to recognize and remember them by Sigmund Spaeth"
 }

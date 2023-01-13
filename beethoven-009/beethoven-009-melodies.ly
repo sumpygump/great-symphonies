@@ -247,7 +247,7 @@ melody_ivh = <<
         e,4 fis g gis | a4 gis a
     }
     \addlyrics {
-        We em -- brace you, count -- less mil - lions,
+        We em -- brace you, count -- less mil -- lions,
         This em -- brace for all the world!
     }
 >> % }}}

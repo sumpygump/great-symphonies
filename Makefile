@@ -5,7 +5,8 @@ LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
 all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 \
 	mozart-040 mozart-039 mozart-041 \
 	beethoven-001 beethoven-002 beethoven-003 beethoven-004 beethoven-005 beethoven-006 beethoven-007 beethoven-008 beethoven-009 \
-	schubert-008 schubert-005
+	schubert-008 schubert-005 schubert-009 \
+	schumann-001 schumann-004 schumann-002 schumann-003
 
 # Haydn 094
 haydn-094: haydn-094/haydn-094.pdf haydn-094/haydn-094-part-1a.png
@@ -158,6 +159,46 @@ schubert-005/schubert-005-part-1a.png: schubert-005/schubert-005-melodies.ly sch
 	cd schubert-005 && $(LILY_PNG) schubert-005-part.ly
 	cd schubert-005 && $(LILY_CLEAN)
 
+# Schubert 009
+schubert-009: schubert-009/schubert-009.pdf schubert-009/schubert-009-part-1a.png
+schubert-009/schubert-009.pdf: schubert-009/schubert-009-melodies.ly schubert-009/schubert-009.ly
+	cd schubert-009 && $(LILY_PDF) schubert-009.ly
+schubert-009/schubert-009-part-1a.png: schubert-009/schubert-009-melodies.ly schubert-009/schubert-009-part.ly
+	cd schubert-009 && $(LILY_PNG) schubert-009-part.ly
+	cd schubert-009 && $(LILY_CLEAN)
+
+# Schumann 001
+schumann-001: schumann-001/schumann-001.pdf schumann-001/schumann-001-part-1a.png
+schumann-001/schumann-001.pdf: schumann-001/schumann-001-melodies.ly schumann-001/schumann-001.ly
+	cd schumann-001 && $(LILY_PDF) schumann-001.ly
+schumann-001/schumann-001-part-1a.png: schumann-001/schumann-001-melodies.ly schumann-001/schumann-001-part.ly
+	cd schumann-001 && $(LILY_PNG) schumann-001-part.ly
+	cd schumann-001 && $(LILY_CLEAN)
+
+# Schumann 004
+schumann-004: schumann-004/schumann-004.pdf schumann-004/schumann-004-part-1a.png
+schumann-004/schumann-004.pdf: schumann-004/schumann-004-melodies.ly schumann-004/schumann-004.ly
+	cd schumann-004 && $(LILY_PDF) schumann-004.ly
+schumann-004/schumann-004-part-1a.png: schumann-004/schumann-004-melodies.ly schumann-004/schumann-004-part.ly
+	cd schumann-004 && $(LILY_PNG) schumann-004-part.ly
+	cd schumann-004 && $(LILY_CLEAN)
+
+# Schumann 002
+schumann-002: schumann-002/schumann-002.pdf schumann-002/schumann-002-part-1a.png
+schumann-002/schumann-002.pdf: schumann-002/schumann-002-melodies.ly schumann-002/schumann-002.ly
+	cd schumann-002 && $(LILY_PDF) schumann-002.ly
+schumann-002/schumann-002-part-1a.png: schumann-002/schumann-002-melodies.ly schumann-002/schumann-002-part.ly
+	cd schumann-002 && $(LILY_PNG) schumann-002-part.ly
+	cd schumann-002 && $(LILY_CLEAN)
+
+# Schumann 003
+schumann-003: schumann-003/schumann-003.pdf schumann-003/schumann-003-part-1a.png
+schumann-003/schumann-003.pdf: schumann-003/schumann-003-melodies.ly schumann-003/schumann-003.ly
+	cd schumann-003 && $(LILY_PDF) schumann-003.ly
+schumann-003/schumann-003-part-1a.png: schumann-003/schumann-003-melodies.ly schumann-003/schumann-003-part.ly
+	cd schumann-003 && $(LILY_PNG) schumann-003-part.ly
+	cd schumann-003 && $(LILY_CLEAN)
+
 clean:
 	rm haydn-094/*.pdf haydn-094/*.png
 	rm haydn-104/*.pdf haydn-104/*.png
@@ -178,3 +219,8 @@ clean:
 	rm beethoven-009/*.pdf beethoven-009/*.png
 	rm schubert-008/*.pdf schubert-008/*.png
 	rm schubert-005/*.pdf schubert-005/*.png
+	rm schubert-009/*.pdf schubert-009/*.png
+	rm schumann-001/*.pdf schumann-001/*.png
+	rm schumann-004/*.pdf schumann-004/*.png
+	rm schumann-002/*.pdf schumann-002/*.png
+	rm schumann-003/*.pdf schumann-003/*.png

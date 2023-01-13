@@ -3,7 +3,7 @@
 \include "schubert-008-melodies.ly"
 
 \header {
-    title = "Symphony No. 8 in B Minor, “Unfinished Symphony”"
+    title = "Symphony No. 8 in B Minor, (D 759) “Unfinished Symphony”"
     composer = "Schubert"
     tagline = "From Great Symphonies: How to recognize and remember them by Sigmund Spaeth"
 }
