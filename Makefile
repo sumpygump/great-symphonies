@@ -1,13 +1,13 @@
 LILY_PDF=lilypond --pdf
-LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
-LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
+LILY_PNG=lilypond -dbackend=eps -dresolution=205 -dno-print-pages -dcrop --png
+LILY_CLEAN=rm -f *.eps && rm -f *.count && rm -f *.tex && rm -f *.texi && rename .cropped '' *.cropped.png
 
 all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 \
 	mozart-040 mozart-039 mozart-041 \
 	beethoven-001 beethoven-002 beethoven-003 beethoven-004 beethoven-005 beethoven-006 beethoven-007 beethoven-008 beethoven-009 \
 	schubert-008 schubert-005 schubert-009 \
 	schumann-001 schumann-004 schumann-002 schumann-003 \
-	mendelssohn-004
+	mendelssohn-003 mendelssohn-004
 
 # Haydn 094
 haydn-094: haydn-094/haydn-094.pdf haydn-094/haydn-094-part-1a.png
@@ -15,7 +15,7 @@ haydn-094/haydn-094.pdf: haydn-094/haydn-094.ly haydn-094/haydn-094-melodies.ly
 	cd haydn-094 && $(LILY_PDF) haydn-094.ly
 haydn-094/haydn-094-part-1a.png: haydn-094/haydn-094-melodies.ly haydn-094/haydn-094-part.ly
 	cd haydn-094 && $(LILY_PNG) haydn-094-part.ly
-	cd haydn-094 && $(LILY_CLEAN)
+	cd haydn-094 && $(LILY_CLEAN) && $(RENAME_CROPPED)
 
 # Haydn 104
 haydn-104: haydn-104/haydn-104.pdf haydn-104/haydn-104-part-1a.png
@@ -208,6 +208,14 @@ mendelssohn-004/mendelssohn-004-part-1a.png: mendelssohn-004/mendelssohn-004-mel
 	cd mendelssohn-004 && $(LILY_PNG) mendelssohn-004-part.ly
 	cd mendelssohn-004 && $(LILY_CLEAN)
 
+# Mendelssohn 003
+mendelssohn-003: mendelssohn-003/mendelssohn-003.pdf mendelssohn-003/mendelssohn-003-part-1a.png
+mendelssohn-003/mendelssohn-003.pdf: mendelssohn-003/mendelssohn-003-melodies.ly mendelssohn-003/mendelssohn-003.ly
+	cd mendelssohn-003 && $(LILY_PDF) mendelssohn-003.ly
+mendelssohn-003/mendelssohn-003-part-1a.png: mendelssohn-003/mendelssohn-003-melodies.ly mendelssohn-003/mendelssohn-003-part.ly
+	cd mendelssohn-003 && $(LILY_PNG) mendelssohn-003-part.ly
+	cd mendelssohn-003 && $(LILY_CLEAN)
+
 clean:
 	rm haydn-094/*.pdf haydn-094/*.png
 	rm haydn-104/*.pdf haydn-104/*.png
@@ -234,3 +242,4 @@ clean:
 	rm schumann-002/*.pdf schumann-002/*.png
 	rm schumann-003/*.pdf schumann-003/*.png
 	rm mendelssohn-004/*.pdf mendelssohn-004/*.png
+	rm mendelssohn-003/*.pdf mendelssohn-003/*.png
