@@ -38,3 +38,8 @@
   \bookOutputSuffix "3a"
   \melody_iiia
 }
+
+\book {
+  \bookOutputSuffix "3b"
+  \melody_iiib
+}

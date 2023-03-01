@@ -112,3 +112,25 @@ melody_iiia = <<
         <<b'4 d,>>
     }
 >> % }}}
+
+% Movement III Melody B {{{
+melody_iiib = <<
+    \relative c'' {
+        \clef "treble"
+        \key d \major
+        \time 2/4
+        r4 <e e,>8[-!\ff r16 <fis fis,>16]-! |
+        <gis gis,>8[-! r16 <a a,>16]-! <b b,>8[-! r16 <cis cis,>16]-! |
+        <d d,>8-! <dis dis,>8-! <e e,>4->~ |
+        <e e,>4 <e e,>8-! <eis eis,>-! |
+        <fis fis,>8.--( <d d,>16-.) <cis cis,>8.--( <e e,>16-.) |
+        <d d,>8.--( <b b,>16-.) <ais ais,>8.--( <cis cis,>16-.) |
+        <b b,>8-! <b' b,>4-> <a a,>8->~ |
+        <a a,>8 <gis gis,>4-> <fis fis,>8-. |
+        <e e,>8-. r8 f,8.( c'16) |
+        b8.( e16) dis8.( b'16) |
+        b8.( e,16) c'8.( f,16) |
+        b8.( e,16) dis8.( a16) |
+        gis8.( b16)
+    }
+>> % }}}
