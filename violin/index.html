@@ -1,0 +1,169 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Great Symphonies - Violin Concertos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="apple-touch-icon" href="/icon.png">
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page">
+            <div class="banner">
+                <div class="book"><a href="#"><img src="/assets/img/book-cover.jpg" height="80" /></a></div>
+                <div class="banner-bd">
+                    <h1><a href="#">Violin Concertos</a></h1>
+                    <p class="subtitle">Learn the basic melodies of the great violin concertos</p>
+                </div>
+            </div>
+
+            <div class="menu">
+                <ol>
+                    <li><a href="#brahms-001">
+                        <span class="composer-img"><img src="/assets/img/brahms.png" /></span>
+                        <span class="composer-name">Brahms</span>
+                        <span class="piece">Violin Concerto in D major Op. 77</span></a></li>
+                </ol>
+            </div>
+
+            <div class="section" id="brahms-001" style="display:none;">
+                <div class="section-hd">
+                    <div class="back"><a href="#">&laquo; Back</a></div>
+                    <h2>Brahms : Violin Concerto in D major, Op. 77</h2>
+                    <div class="btns">
+                        <a class="btn" href="brahms-001/brahms-001.pdf" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+                <div class="section-bd">
+                    <h3>Movement I, Opening</h3>
+                    <div class="clip">
+                        <div class="img"><img src="brahms-001/brahms-001-part-1_opening.png" loading="lazy" /></div>
+                        <audio controls="controls" preload="none">
+                            <source src="brahms-001/brahms-001-part-1_opening.ogg" type="audio/ogg">
+                        </audio>
+                    </div>
+                </div>
+                <div class="section-bd">
+                    <h3>Movement I, Melody A</h3>
+                    <div class="clip">
+                        <div class="img"><img src="brahms-001/brahms-001-part-1a.png" loading="lazy" /></div>
+                        <audio controls="controls" preload="none">
+                            <source src="brahms-001/brahms-001-part-1a.ogg" type="audio/ogg">
+                        </audio>
+                        <audio controls="controls" preload="none">
+                            <source src="brahms-001/brahms-001-part-1a-solo.ogg" type="audio/ogg">
+                        </audio>
+                    </div>
+                </div>
+                <div class="section-bd">
+                    <h3>Movement I, Melody B (Soloist enters)</h3>
+                    <div class="clip">
+                        <div class="img"><img src="brahms-001/brahms-001-part-1b.png" loading="lazy" /></div>
+                        <audio controls="controls" preload="none">
+                            <source src="brahms-001/brahms-001-part-1b.ogg" type="audio/ogg">
+                        </audio>
+                    </div>
+                </div>
+                <div class="section-bd">
+                    <h3>Movement I, Melody C</h3>
+                    <div class="clip">
+                        <div class="img"><img src="brahms-001/brahms-001-part-1c.png" loading="lazy" /></div>
+                        <audio controls="controls" preload="none">
+                            <source src="brahms-001/brahms-001-part-1c.ogg" type="audio/ogg">
+                        </audio>
+                    </div>
+                </div>
+                <div class="section-bd">
+                    <h3>Movement II, Melody A</h3>
+                    <div class="clip">
+                        <div class="img"><img src="brahms-001/brahms-001-part-2a.png" loading="lazy" /></div>
+                        <audio controls="controls" preload="none">
+                            <source src="brahms-001/brahms-001-part-2a.ogg" type="audio/ogg">
+                        </audio>
+                    </div>
+                </div>
+                <div class="section-bd">
+                    <h3>Movement II, Melody B</h3>
+                    <div class="clip">
+                        <div class="img"><img src="brahms-001/brahms-001-part-2b.png" loading="lazy" /></div>
+                        <audio controls="controls" preload="none">
+                            <source src="brahms-001/brahms-001-part-2b.ogg" type="audio/ogg">
+                        </audio>
+                    </div>
+                </div>
+                <div class="section-bd">
+                    <h3>Movement III, Melody A</h3>
+                    <div class="clip">
+                        <div class="img"><img src="brahms-001/brahms-001-part-3a.png" loading="lazy" /></div>
+                        <audio controls="controls" preload="none">
+                            <source src="brahms-001/brahms-001-part-3a.ogg" type="audio/ogg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- .page -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script>
+            var Symphonies = {
+                sections: null,
+                menu: null,
+
+                init: function() {
+                    this.sections = $('.section');
+                    this.menu = $('.menu');
+                    this.hideSections();
+                    this.bind();
+
+                    if (window.location.hash) {
+                        this.showSection(window.location.hash);
+                    }
+                },
+                bind: function() {
+                    var self = this;
+                    $(window).on('hashchange', function(e) {
+                        // Clicking links in menu and the back will trigger
+                        // hash changes which triggers the logic here
+                        if (window.location.hash) {
+                            self.hideSections();
+                            self.showSection(window.location.hash);
+                        } else {
+                            self.hideSections();
+                            self.showMenu();
+                        }
+                    });
+                },
+                hideSections: function() {
+                    this.sections.hide();
+                },
+                showSection: function(id) {
+                    this.sections.filter(id).show();
+                    this.hideMenu();
+
+                    // This handles lazy loading the youtube embeds;
+                    // It only loads the src after the section is shown
+                    this.sections.filter(id).find('iframe').each(function() {
+                        $(this).attr('src', $(this).data('src'));
+                    });
+                },
+                hideMenu: function() {
+                    this.menu.hide();
+                },
+                showMenu: function() {
+                    this.menu.show();
+                }
+            };
+
+            $(function() {
+                Symphonies.init();
+            });
+        </script>
+    </body>
+</html>
