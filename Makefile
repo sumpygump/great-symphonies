@@ -1,13 +1,15 @@
 LILY_PDF=lilypond --pdf
-LILY_PNG=lilypond -dbackend=eps -dresolution=205 -dno-print-pages -dcrop --png
-LILY_CLEAN=rm -f *.eps && rm -f *.count && rm -f *.tex && rm -f *.texi && rename .cropped '' *.cropped.png
+#LILY_PNG=lilypond -dbackend=eps -dresolution=205 -dno-print-pages -dcrop --png
+LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
+#LILY_CLEAN=rm -f *.eps && rm -f *.count && rm -f *.tex && rm -f *.texi && rename .cropped '' *.cropped.png
+LILY_CLEAN=rm -f *.eps && rm -f *.count && rm -f *.tex && rm -f *.texi
 
 all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 \
 	mozart-040 mozart-039 mozart-041 \
 	beethoven-001 beethoven-002 beethoven-003 beethoven-004 beethoven-005 beethoven-006 beethoven-007 beethoven-008 beethoven-009 \
 	schubert-008 schubert-005 schubert-009 \
 	schumann-001 schumann-004 schumann-002 schumann-003 \
-	mendelssohn-003 mendelssohn-004
+	mendelssohn-004 mendelssohn-003
 
 # Haydn 094
 haydn-094: haydn-094/haydn-094.pdf haydn-094/haydn-094-part-1a.png

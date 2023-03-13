@@ -44,12 +44,12 @@ melody_ib = <<
 melody_iia = <<
     \relative c'' {
         \clef "treble"
-        \key d \minor
+        \key f \major
         \time 4/4
         \partial 4 a4 |
         d4 d c f,8( g) |
         a2 d,8 r8 d4 |
-        e4 f a8 g8 f( g) |
+        e4 f a8 g f( g) |
         a4.( c16 bes) a8 r8 a4 |
         d4 d c f,8( g) |
         a2 bes4 a |
@@ -73,7 +73,7 @@ melody_iib = <<
         r4 e8 d cis4 fis8 e |
         d4 b'8 a a gis fis gis |
         a8 b cis b a4 gis8 fis |
-        e8 gis a dis, fis4. e8 |
+        e8 gis a dis,8 fis4. e8 |
         e8
     }
     \addlyrics {
@@ -90,12 +90,12 @@ melody_iiia = <<
         \clef "treble"
         \key d \major
         \time 3/4
-        \partial 4. a8 gis8 a |
-        b8 a g fis g e |
+        \partial 4. a8 gis a |
+        b8 a g! fis g e |
         cis4 cis d |
         e4 e a |
         fis2 g8 e |
-        d4 d'4 cis |
+        d4 d' cis |
         cis4 b a |
         a4 e g8( fis) |
         e4
@@ -103,7 +103,7 @@ melody_iiia = <<
     \addlyrics {
         With all the fid -- dles
         join -- ing in a dance tune,
-        we count one, two, three, 
+        we count one, two, three,
         For it sounds just like waltz time
         to you and to me.
     }
@@ -133,16 +133,16 @@ melody_iva = <<
         \key c \major
         \time 4/4
         \partial 4. e8 \tuplet 3/2 {c8( d) e} |
-        \tuplet 3/2 {f8 r d} \tuplet 3/2 {f( e) d} \tuplet 3/2 {e r c} \tuplet 3/2 {e d c} |
-        b8 r e r \tuplet 3/2 {c r e} \tuplet 3/2 {c d e} |
-        \tuplet 3/2 {f r d} \tuplet 3/2 {f e d} e r a r |
+        \tuplet 3/2 {f8 r8 d} \tuplet 3/2 {f8( e) d} \tuplet 3/2 {e8 r8 c} \tuplet 3/2 {e8 d c} |
+        b8 r8 e r \tuplet 3/2 {c8 r8 e} \tuplet 3/2 {c8 d e} |
+        \tuplet 3/2 {f8 r d} \tuplet 3/2 {f8 e d} e8 r a r |
         gis2\trill fis16( gis) a8
     }
     \addlyrics {
-        The Sal -- tar el -- lo you can tell,
-        Oh, what an ex -- cit -- ing sound!
+        The Sal -- tar -- el -- lo you can tell, Oh,
+        what an ex -- cit -- ing sound!
         It's Men -- dels -- sohn's way
         of seem -- ing to say
-        All turn a -- round!
+        “All turn a -- round!”
     }
 >> % }}}

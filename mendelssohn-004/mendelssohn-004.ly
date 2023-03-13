@@ -1,4 +1,4 @@
-% Mendelssohn Symphony No. 4
+% Mendelssohn Symphony No. 4, Op. 90 (Italian)
 \version "2.18.2"
 \include "mendelssohn-004-melodies.ly"
 
