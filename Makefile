@@ -1,5 +1,10 @@
-#LILY_PDF=lilypond --pdf
+PROD_BUILD ?= 1
+ifeq (${PROD_BUILD},1)
 LILY_PDF=lilypond --pdf -dno-point-and-click
+else
+LILY_PDF=lilypond --pdf
+endif
+
 LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
 LILY_CLEAN=rm -f *.eps && rm -f *.count && rm -f *.tex && rm -f *.texi
 
@@ -8,7 +13,8 @@ all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 \
 	beethoven-001 beethoven-002 beethoven-003 beethoven-004 beethoven-005 beethoven-006 beethoven-007 beethoven-008 beethoven-009 \
 	schubert-008 schubert-005 schubert-009 \
 	schumann-001 schumann-004 schumann-002 schumann-003 \
-	mendelssohn-004 mendelssohn-003
+	mendelssohn-004 mendelssohn-003 \
+	brahms-001
 
 # Haydn 094
 haydn-094: haydn-094/haydn-094.pdf haydn-094/haydn-094-part-1a.png
@@ -217,6 +223,14 @@ mendelssohn-003/mendelssohn-003-part-1a.png: mendelssohn-003/mendelssohn-003-mel
 	cd mendelssohn-003 && $(LILY_PNG) mendelssohn-003-part.ly
 	cd mendelssohn-003 && $(LILY_CLEAN)
 
+# Brahms 001
+brahms-001: brahms-001/brahms-001.pdf brahms-001/brahms-001-part-1a.png
+brahms-001/brahms-001.pdf: brahms-001/brahms-001-melodies.ly brahms-001/brahms-001.ly
+	cd brahms-001 && $(LILY_PDF) brahms-001.ly
+brahms-001/brahms-001-part-1a.png: brahms-001/brahms-001-melodies.ly brahms-001/brahms-001-part.ly
+	cd brahms-001 && $(LILY_PNG) brahms-001-part.ly
+	cd brahms-001 && $(LILY_CLEAN)
+
 clean:
 	rm haydn-094/*.pdf haydn-094/*.png
 	rm haydn-104/*.pdf haydn-104/*.png
@@ -244,6 +258,7 @@ clean:
 	rm schumann-003/*.pdf schumann-003/*.png
 	rm mendelssohn-004/*.pdf mendelssohn-004/*.png
 	rm mendelssohn-003/*.pdf mendelssohn-003/*.png
+	rm brahms-001/*.pdf brahms-001/*.png
 
 clean_pdf:
 	rm haydn-094/*.pdf
@@ -272,3 +287,4 @@ clean_pdf:
 	rm schumann-003/*.pdf
 	rm mendelssohn-004/*.pdf
 	rm mendelssohn-003/*.pdf
+	rm brahms-001/*.pdf

@@ -1,5 +1,10 @@
-#LILY_PDF=lilypond --pdf
+PROD_BUILD ?= 1
+ifeq (${PROD_BUILD},1)
 LILY_PDF=lilypond --pdf -dno-point-and-click
+else
+LILY_PDF=lilypond --pdf
+endif
+
 LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
 LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
 
