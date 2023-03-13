@@ -7,7 +7,7 @@ melody_ia = <<
         \partial 8 a8 |
         b cis d e fis g | a4 fis8 d'4. |
         b4 g8 e'4. | d8 cis b a b a |
-        g4. fis8 r8 |
+        g4. fis8 r8
     }
     \addlyrics {
       Let's hur -- ry with Hay -- dn to wind the clock, |
