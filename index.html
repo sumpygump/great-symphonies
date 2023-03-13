@@ -2668,7 +2668,7 @@
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script>
-            var Symphonies = {
+            const Symphonies = {
                 sections: null,
                 menu: null,
 
@@ -2683,7 +2683,7 @@
                     }
                 },
                 bind: function() {
-                    var self = this;
+                    const self = this;
                     $(window).on('hashchange', function(e) {
                         // Clicking links in menu and the back will trigger
                         // hash changes which triggers the logic here
@@ -2708,6 +2708,9 @@
                     this.sections.filter(id).find('iframe').each(function() {
                         $(this).attr('src', $(this).data('src'));
                     });
+
+                    // Be sure to scroll to top of window
+                    window.scrollTo(0, 0);
                 },
                 hideMenu: function() {
                     this.menu.hide();
