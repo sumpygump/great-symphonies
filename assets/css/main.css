@@ -148,7 +148,7 @@ a:active {
 
 .clip audio {
     display: block;
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
 }
 
@@ -175,6 +175,10 @@ a:active {
 @media only screen and (min-width: 620px) {
     .menu ol li {
         width: 49%;
+    }
+
+    .clip audio {
+        width: 400px;
     }
 }
 
