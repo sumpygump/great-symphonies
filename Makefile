@@ -1,7 +1,6 @@
-LILY_PDF=lilypond --pdf
-#LILY_PNG=lilypond -dbackend=eps -dresolution=205 -dno-print-pages -dcrop --png
+#LILY_PDF=lilypond --pdf
+LILY_PDF=lilypond --pdf -dno-point-and-click
 LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
-#LILY_CLEAN=rm -f *.eps && rm -f *.count && rm -f *.tex && rm -f *.texi && rename .cropped '' *.cropped.png
 LILY_CLEAN=rm -f *.eps && rm -f *.count && rm -f *.tex && rm -f *.texi
 
 all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 \
@@ -245,3 +244,31 @@ clean:
 	rm schumann-003/*.pdf schumann-003/*.png
 	rm mendelssohn-004/*.pdf mendelssohn-004/*.png
 	rm mendelssohn-003/*.pdf mendelssohn-003/*.png
+
+clean_pdf:
+	rm haydn-094/*.pdf
+	rm haydn-104/*.pdf
+	rm haydn-101/*.pdf
+	rm haydn-092/*.pdf
+	rm haydn-100/*.pdf
+	rm mozart-040/*.pdf
+	rm mozart-039/*.pdf
+	rm mozart-041/*.pdf
+	rm beethoven-001/*.pdf
+	rm beethoven-002/*.pdf
+	rm beethoven-003/*.pdf
+	rm beethoven-004/*.pdf
+	rm beethoven-005/*.pdf
+	rm beethoven-006/*.pdf
+	rm beethoven-007/*.pdf
+	rm beethoven-008/*.pdf
+	rm beethoven-009/*.pdf
+	rm schubert-008/*.pdf
+	rm schubert-005/*.pdf
+	rm schubert-009/*.pdf
+	rm schumann-001/*.pdf
+	rm schumann-004/*.pdf
+	rm schumann-002/*.pdf
+	rm schumann-003/*.pdf
+	rm mendelssohn-004/*.pdf
+	rm mendelssohn-003/*.pdf
