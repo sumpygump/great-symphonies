@@ -1,4 +1,5 @@
-LILY_PDF=lilypond --pdf
+#LILY_PDF=lilypond --pdf
+LILY_PDF=lilypond --pdf -dno-point-and-click
 LILY_PNG=lilypond -dbackend=eps -dresolution=205 --png
 LILY_CLEAN=rm *.eps && rm *.count && rm *.tex && rm *.texi
 
@@ -41,3 +42,9 @@ clean:
 	rm bruch-001/*.pdf bruch-001/*.png
 	rm mendelssohn-001/*.pdf mendelssohn-001/*.png
 	rm tchaikovsky-001/*.pdf tchaikovsky-001/*.png
+
+clean_pdf:
+	rm brahms-001/*.pdf
+	rm bruch-001/*.pdf
+	rm mendelssohn-001/*.pdf
+	rm tchaikovsky-001/*.pdf
