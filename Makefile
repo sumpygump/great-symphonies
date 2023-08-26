@@ -14,7 +14,8 @@ all: haydn-094 haydn-104 haydn-101 haydn-092 haydn-100 \
 	schubert-008 schubert-005 schubert-009 \
 	schumann-001 schumann-004 schumann-002 schumann-003 \
 	mendelssohn-004 mendelssohn-003 \
-	brahms-001 brahms-002 brahms-003 brahms-004
+	brahms-001 brahms-002 brahms-003 brahms-004 \
+	franck-001
 
 # Haydn 094
 haydn-094: haydn-094/haydn-094.pdf haydn-094/haydn-094-part-1a.png
@@ -255,6 +256,14 @@ brahms-004/brahms-004-part-1a.png: brahms-004/brahms-004-melodies.ly brahms-004/
 	cd brahms-004 && $(LILY_PNG) brahms-004-part.ly
 	cd brahms-004 && $(LILY_CLEAN)
 
+# Franck 001
+franck-001: franck-001/franck-001.pdf franck-001/franck-001-part-1a.png
+franck-001/franck-001.pdf: franck-001/franck-001-melodies.ly franck-001/franck-001.ly
+	cd franck-001 && $(LILY_PDF) franck-001.ly
+franck-001/franck-001-part-1a.png: franck-001/franck-001-melodies.ly franck-001/franck-001-part.ly
+	cd franck-001 && $(LILY_PNG) franck-001-part.ly
+	cd franck-001 && $(LILY_CLEAN)
+
 clean:
 	rm haydn-094/*.pdf haydn-094/*.png
 	rm haydn-104/*.pdf haydn-104/*.png
@@ -286,6 +295,7 @@ clean:
 	rm brahms-002/*.pdf brahms-002/*.png
 	rm brahms-003/*.pdf brahms-003/*.png
 	rm brahms-004/*.pdf brahms-004/*.png
+	rm franck-001/*.pdf franck-001/*.png
 
 clean_pdf:
 	rm haydn-094/*.pdf
@@ -318,3 +328,4 @@ clean_pdf:
 	rm brahms-002/*.pdf
 	rm brahms-003/*.pdf
 	rm brahms-004/*.pdf
+	rm franck-001/*.pdf
